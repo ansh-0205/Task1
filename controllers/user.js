@@ -1,7 +1,8 @@
 const sequelize = require('sequelize');
-const db=require('../utils/models');
-const User = db.user;
-require('../utils/relation')
+const models=require('../utils/models');
+const User = models.user;
+
+require('../utils/relation');
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 const dotenv = require('dotenv').config();

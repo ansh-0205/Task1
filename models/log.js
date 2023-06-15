@@ -10,7 +10,7 @@
 // }
 const Sequelize = require('sequelize');
 const db = require('../config');
-        const Log = db.define("Log",{
+    const Log = db.define("Log",{
     checkIn:Sequelize.STRING,
     checkOut:Sequelize.STRING,
     duration:Sequelize.STRING

@@ -1,5 +1,8 @@
-const db=require('../config');
-const UserVehicle=db.userVehicle;
+const sequelize = require('sequelize');
+const models=require('../utils/models');
+const UserVehicle = models.userVehicle;
+
+require('../utils/relation');
 const addVehicle = async(req,res) => {
     try{
         const data = await UserVehicle.create({

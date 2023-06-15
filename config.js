@@ -1,9 +1,9 @@
 const { Sequelize , DataTypes } = require('sequelize');
-
-const sequelize = new Sequelize('Task','root','',{
-    host:'localhost',
-    port:'3307',
-    dialect:'mysql'
+const dotenv = require('dotenv').config();
+const sequelize = new Sequelize(process.env.dbName,process.env.dbPath,process.env.dbPassword,{
+    host:process.env.dbHost,
+    port:process.env.dbPort,
+    dialect:process.env.dbDialect
 });
 
 try{

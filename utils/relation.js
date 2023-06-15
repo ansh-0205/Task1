@@ -16,8 +16,8 @@ const db = require('../config');
 const Models = require('./models');
 
 exports.modelRelationship = async() =>{
-    Models.user.hasMany(Models.userVehicle,{foreignKey:'userId'});
-Models.userVehicle.belongsTo(Models.user,{foreignKey:'userId'});
+    Models.user.hasMany(Models.userVehicle);
+    Models.userVehicle.belongsTo(Models.user);
 db.sync()
     .then(()=>{
         console.log('Re-Sync');
